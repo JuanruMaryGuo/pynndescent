@@ -248,8 +248,6 @@ def nn_descent_internal_low_memory_parallel(
     n_threads = numba.get_num_threads()
 
     for n in range(n_iters):
-        if verbose:
-            print("\t", n + 1, " / ", n_iters)
 
         (new_candidate_neighbors, old_candidate_neighbors) = new_build_candidates(
             current_graph, max_candidates, rng_state, n_threads
@@ -295,8 +293,6 @@ def nn_descent_internal_high_memory_parallel(
     ]
 
     for n in range(n_iters):
-        if verbose:
-            print("\t", n + 1, " / ", n_iters)
 
         (new_candidate_neighbors, old_candidate_neighbors) = new_build_candidates(
             current_graph, max_candidates, rng_state, n_threads
