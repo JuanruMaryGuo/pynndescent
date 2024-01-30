@@ -351,7 +351,7 @@ def nn_descent(
         raise ValueError("Invalid initial graph specified!")
 
     if low_memory:
-        nn_descent_internal_low_memory_parallel(
+        nn_descent_internal_high_memory_parallel(
             current_graph,
             data,
             n_neighbors,
